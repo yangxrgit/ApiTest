@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "testLoginSuite">
+    <test name = "loginTest">
+<!--        <parameter name="username" value="yangxr"/>-->
+<!--        <parameter name="password" value="123456"/>-->
+        <classes>
+            <class name = "testcase.TestCase"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <!--测试报告监听器-->
+        <listener class-name="utils.ExtentTestNGIReporterListener"/>
+    </listeners>
+
+</suite>

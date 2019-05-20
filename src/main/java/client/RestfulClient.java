@@ -10,6 +10,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpOptions;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -71,6 +72,7 @@ public class RestfulClient {
 
     //通过httpclient获取post请求的反馈
     public void sendPost(String url, List<NameValuePair> params,HashMap<String,String> headers) throws ClientProtocolException, IOException{
+        httpclient = HttpClients.createDefault();
         httpPost = new HttpPost(url);
         httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
         //设置头部信息

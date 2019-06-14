@@ -14,10 +14,12 @@ import java.io.IOException;
 //POI读取外部Excel
 public class ExcelProcess {
 
+    public static Object[][] proessExcel(String filePath,int sheetId) throws IOException{
+
     //数据流读入excel
     File file = new File(System.getProperty("user.dir")+filePath);
     FileInputStream fis = new FileInputStream(file);
-    HSSFWorkbook wb  = new HSSFWorkbook(fis);
+    HSSFWorkbook wb = new HSSFWorkbook(fis);
 
     //读取特定表单并计算行列数
     HSSFSheet sheet = wb.getSheetAt(sheetId);
@@ -26,7 +28,7 @@ public class ExcelProcess {
 
     //将表单数据处理存入dtt对象
     Object[][] dttData = new Object[numberOfRow][numberOfCell];
-            for(int i=0;i<numberOfRow;i++){
+    for(int i=0;i<numberOfRow;i++){
         if(null==sheet.getRow(i)||"".equals(sheet.getRow(i))){
             continue;
         }
@@ -39,10 +41,8 @@ public class ExcelProcess {
             dttData[i][j] = cell.getStringCellValue();
         }
     }
-
-    public ExcelProcess() throws IOException {
-    }
-            return dttData;
+    return dttData;
+}
 }
 
 

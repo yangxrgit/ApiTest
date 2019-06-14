@@ -7,8 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ApiTest" />
+        <module name="apptest" />
         <module name="AutoTest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbo-business" target="1.6" />
+      <module name="dubbo-business-biz" target="1.8" />
+      <module name="dubbo-business-gateway" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

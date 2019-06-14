@@ -4,13 +4,13 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 //测试基类
-public class TestApi {
+public class TestAPI {
     public Properties prop;
     public String excelPath;
     public String host;
 
     //构造函数
-    public TestApi() {
+    public TestAPI() {
         try {
             //数据流的形式读取配置文件
             prop = new Properties();

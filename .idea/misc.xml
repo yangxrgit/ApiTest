@@ -8,10 +8,19 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../apptest/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo-business/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../dubbo-business/dubbo-business-biz/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo-business/dubbo-business-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo-business/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
